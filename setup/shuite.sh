@@ -23,7 +23,7 @@ function __shuite_autocomplete {
   cur="${COMP_WORDS[COMP_CWORD]}"
   case "${COMP_CWORD}" in
     1)
-      opts="$(find "$DEVSYNC_ROOT"/functions -type f | sed -r "s/.+\/(.+)\..+/\1/")"
+      opts="$(find "$SHUITE_ROOT"/functions -type f | sed -r "s/.+\/(.+)\..+/\1/")"
     ;;
     2)
       # TODO does that make sense here?

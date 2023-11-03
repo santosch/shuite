@@ -1,4 +1,4 @@
-# List of commands from plugins/sync
+# List of commands from plugins/sync #
 
 The following have to be executed from your project root folder:
 

@@ -16,10 +16,10 @@ SHUITE_DEFAULT_PLUGINS=(
   "plugins/sync"
 )
 
-if [[ -z $SHUITE_PLUGINS ]];
+if [[ -z $SHUITE_PLUGIN_LIST ]];
 then
   SHUITE_PLUGINS=( "${SHUITE_DEFAULT_PLUGINS[@]}" )
 else
   # shellcheck disable=SC2206
-  SHUITE_PLUGINS=(${SHUITE_PLUGINS//,/ })
+  SHUITE_PLUGINS=(${SHUITE_PLUGIN_LIST//,/ })
 fi
