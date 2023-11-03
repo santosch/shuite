@@ -30,3 +30,8 @@ but the code is executed on a remote server
   make sure you have the same version of rsync installed locally and on the server.
 - The format of the .rsyncignore file follows the scheme for the rsync argument `--exclude-from`,  
   read about it here: https://stackoverflow.com/a/23682701
+- It might make sense to add a File-Watcher triggering this to your IDE.  
+  For IntelliJ-based IDEs you can do so via *Settings -> Tools -> File Watchers -> +*
+  *Program*:           `wsl`  
+  *Arguments*:         `-d "Ubuntu-22.04" bash --login -i -c "shuite sync my-server"`  
+  *Working directory*: your project root
