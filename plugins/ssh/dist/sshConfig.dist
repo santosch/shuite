@@ -1,0 +1,24 @@
+# Global Config
+
+# Forward your ssh-keys
+ForwardAgent yes
+
+# Prevent disconnects when inactive in some environments
+TCPKeepAlive yes
+ServerAliveInterval 5
+
+# Re-use already open ssh-connections
+Host *
+  ControlMaster auto
+  ControlPath ~/.ssh/control-%C
+  ControlPersist 1m
+
+##################################
+# Servers
+##################################
+
+### Example
+# Host my-server-name
+# User {{user}}
+# Port 22
+# HostName 123.456.789.123
